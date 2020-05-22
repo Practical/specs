@@ -5,6 +5,24 @@ Syntax
 Grammar
 =======
 
+Introduction
+------------
+
+In this section, the following convention is used:
+
++---------------+-----------+--------------+
+| Element       | Form      | Example      |
++===============+===========+==============+
+| Non-Terminal  | Italics   | *Expression* |
++---------------+-----------+--------------+
+| Verbatim text | Monospace | ``if``       |
++---------------+-----------+--------------+
+| Terminal      | Bold      | **literal**  |
++---------------+-----------+--------------+
+
+Syntax Description
+------------------
+
 *Module* :math:`\rightarrow` *GlobalExpressionsList*
 
 *GlobalExpressionsList* :math:`\rightarrow` :math:`\epsilon`
@@ -51,17 +69,17 @@ Grammar
 
 *Expression* :math:`\rightarrow` *Expression* ``(`` *FuncCallArguments* ``)``
 
-*Expression* :math:`\rightarrow` *Expression* **op** *Expression* [#operations]_
+*Expression* :math:`\rightarrow` *Expression* **op** *Expression* [#Operations]_
 
-*Expression* :math:`\rightarrow` *Expression* **op**
+*Expression* :math:`\rightarrow` *Expression* **op** [#Operations]_
 
-*Expression* :math:`\rightarrow` **op** *Expression*
+*Expression* :math:`\rightarrow` **op** *Expression* [#Operations]_
 
 *Expression* :math:`\rightarrow` **cast_type** ``!`` *TemplateParam* ``(`` *Expression* ``)``
 
 *Expression* :math:`\rightarrow` *Type*
 
-*Expression* :math:`\rightarrow` ``if`` ``(`` *Expression* ``)`` *CompoundExpression* ``else`` *CompoundExpression*
+*Expression* :math:`\rightarrow` ``if`` ``(`` *Expression* ``)`` *CompoundExpression* ``else`` *CompoundExpression* [#ConditionalExpression]_
 
 *TemplateParam* :math:`\rightarrow` **id**
 
@@ -101,4 +119,6 @@ Grammar
 
 .. rubric:: Footnotes
 
-.. [#operations] For list of actual operators and their precedence, see https://github.com/Practical/practical-sa/wiki/Operators.
+.. [#Operations] For list of actual operators and their precedence, see https://github.com/Practical/practical-sa/wiki/Operators.
+.. [#ConditionalExpression]
+    A conditional expression *must* have an ``else`` clause, as it must return a value regardless of the condition's result.
