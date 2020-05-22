@@ -4,4 +4,7 @@
 Language Specifications
 =======================
 
-Something *or* other
+.. toctree::
+    :numbered:
+
+    syntax
