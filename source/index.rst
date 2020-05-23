@@ -1,5 +1,6 @@
 .. figure:: logo-one-line.png
     :alt: Practical Programming Language
+    :align: center
 
 Language Specifications
 =======================
@@ -8,4 +9,5 @@ Language Specifications
     :numbered:
     :maxdepth: 2
 
+    operators
     syntax
