@@ -9,5 +9,6 @@ Language Specifications
     :numbered:
     :maxdepth: 2
 
-    operators
     syntax
+    operators
+    casts
