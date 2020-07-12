@@ -86,13 +86,14 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'bizstyle'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
 # html_theme_options = {}
+#html_theme_options = { "globaltoc_collapse": False }
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -106,7 +107,8 @@ html_static_path = ['_static']
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
     '**': [
-        'relations.html',  # needs 'show_related': True theme option to display
+#        'relations.html',  # needs 'show_related': True theme option to display
+        'globaltoc.html',
         'searchbox.html',
     ]
 }
