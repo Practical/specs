@@ -101,6 +101,8 @@ Syntax Description
 
 *Type* :math:`\rightarrow` *Identifier*
 
+*Type* :math:`\rightarrow` *Type* ``*``
+
 *VariableDefinition* :math:`\rightarrow` ``def`` *VariableDeclBody*
 
 *VariableDefinition* :math:`\rightarrow` ``def`` *VariableDeclBody* ``=`` *Expression*
