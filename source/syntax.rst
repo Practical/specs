@@ -101,7 +101,7 @@ Syntax Description
 
 *Type* :math:`\rightarrow` *Identifier*
 
-*Type* :math:`\rightarrow` *Type* ``*``
+*Type* :math:`\rightarrow` *Type* ``@``
 
 *VariableDefinition* :math:`\rightarrow` ``def`` *VariableDeclBody*
 
@@ -121,6 +121,6 @@ Syntax Description
 
 .. rubric:: Footnotes
 
-.. [#Operations] For list of actual operators and their precedence, see https://github.com/Practical/practical-sa/wiki/Operators.
+.. [#Operations] For list of actual operators and their precedence, see :doc:`operators`.
 .. [#ConditionalExpression]
     A conditional expression *must* have an ``else`` clause, as it must return a value regardless of the condition's result.
