@@ -103,6 +103,8 @@ Syntax Description
 
 *Type* :math:`\rightarrow` *Type* ``@``
 
+*Type* :math:`\rightarrow` *Type* ``ref`` [#Reference]_
+
 *VariableDefinition* :math:`\rightarrow` ``def`` *VariableDeclBody*
 
 *VariableDefinition* :math:`\rightarrow` ``def`` *VariableDeclBody* ``=`` *Expression*
@@ -122,5 +124,7 @@ Syntax Description
 .. rubric:: Footnotes
 
 .. [#Operations] For list of actual operators and their precedence, see :doc:`operators`.
+.. [#Reference] The syntax suggests ``ref`` may follow any type definition. In practice, it must be the last type modifier. This
+   is enforced by the semantic stage, rather than the language's syntax, in order to produce clearer error messages.
 .. [#ConditionalExpression]
     A conditional expression *must* have an ``else`` clause, as it must return a value regardless of the condition's result.
