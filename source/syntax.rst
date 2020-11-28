@@ -91,6 +91,8 @@ Syntax Description
 
 *Literal* :math:`\rightarrow` **literal_fp**
 
+*Literal* :math:`\rightarrow` ``null``
+
 *CompoundStatement* :math:`\rightarrow` ``{`` *StatementList* ``}``
 
 *CompoundExpression* :math:`\rightarrow` ``{`` *StatementList* *Expression* ``}``
