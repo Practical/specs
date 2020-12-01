@@ -31,9 +31,15 @@ Syntax Description
 
 *GlobalExpression* :math:`\rightarrow` *FuncDef*
 
+*GlobalExpression* :math:`\rightarrow` *FuncDecl*
+
 *FuncDef* :math:`\rightarrow` ``def`` *FuncDeclBody* *Statement*
 
 *FuncDef* :math:`\rightarrow` ``def`` *FuncDeclBody* *Expression*
+
+*FuncDecl* :math:`\rightarrow` ``decl`` *FuncDeclBody* ``;``
+
+*FuncDecl* :math:`\rightarrow` ``decl`` ``(`` **literal_string** ``)`` *FuncDeclBody* ``;``
 
 *FuncDeclBody* :math:`\rightarrow` *Identifier* ``(`` *FuncDeclArgs* ``)`` *FuncDeclRet*
 
