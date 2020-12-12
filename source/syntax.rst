@@ -91,13 +91,21 @@ Syntax Description
 
 *TemplateParam* :math:`\rightarrow` ``(`` *Expression* ``)``
 
-*Literal* :math:`\rightarrow` **literal_string**
+*Literal* :math:`\rightarrow` *LiteralInt*
 
-*Literal* :math:`\rightarrow` **literal_int**
+*Literal* :math:`\rightarrow` *LiteralString*
 
-*Literal* :math:`\rightarrow` **literal_fp**
+*Literal* :math:`\rightarrow` *LiteralFP*
 
-*Literal* :math:`\rightarrow` ``null``
+*Literal* :math:`\rightarrow` *LiteralPointer*
+
+*LiteralString* :math:`\rightarrow` **literal_string**
+
+*LiteralInt* :math:`\rightarrow` **literal_int**
+
+*LiteralFP* :math:`\rightarrow` **literal_fp**
+
+*LiteralPointer* :math:`\rightarrow` ``null``
 
 *CompoundStatement* :math:`\rightarrow` ``{`` *StatementList* ``}``
 
@@ -114,6 +122,8 @@ Syntax Description
 *Type* :math:`\rightarrow` *Identifier*
 
 *Type* :math:`\rightarrow` *Type* ``@``
+
+*Type* :math:`\rightarrow` *Type* ``[`` LiteralInt ``]``
 
 *VariableDefinition* :math:`\rightarrow` ``def`` *VariableDeclBody*
 
