@@ -33,6 +33,8 @@ Syntax Description
 
 *GlobalExpression* :math:`\rightarrow` *FuncDecl*
 
+*GlobalExpression* :math:`\rightarrow` *StructDef*
+
 *FuncDef* :math:`\rightarrow` ``def`` *FuncDeclBody* *Statement*
 
 *FuncDef* :math:`\rightarrow` ``def`` *FuncDeclBody* *Expression*
@@ -56,6 +58,12 @@ Syntax Description
 *FuncDeclRet* :math:`\rightarrow` :math:`\epsilon`
 
 *FuncDeclRet* :math:`\rightarrow` ``->`` *TransientType*
+
+*StructDef* :math:`\rightarrow` ``struct`` *Identifier* ``{`` *StructDefBody* ``}``
+
+*StructDefBody* :math:`\rightarrow` *VariableDefinition* *StructDefBody*
+
+*StructDefBody* :math:`\rightarrow` :math:`\epsilon`
 
 *Statement* :math:`\rightarrow` *CompoundStatement*
 
