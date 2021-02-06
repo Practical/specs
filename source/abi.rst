@@ -63,3 +63,26 @@ Arrays
 #. Number signifying the array's dimensions
 #. Mangled name of element type
 
+
+Structs
+~~~~~~~
+
+#. A literal ``S``.
+#. If the struct is namespace or otherwise scoped, the scope's representation follows.
+#. Next comes the **total** length, in decimal, of the struct's data.
+#. The struct's name.
+#. 8 characters encoding the hash of the struct's content.
+
+Struct Hash Encoding
+^^^^^^^^^^^^^^^^^^^^
+
+The struct's hash value is calculated over it's name and members according to the following formula:
+
+**TBD**
+
+The hash is calculated in 64 bits.
+
+The lower 48 bits of the hash are taken, and then encoded with Base64 with ``+`` replaced with ``_`` and ``/`` replaced with ``@``.
+On platforms where ``@`` cannot be used, another symbol MUST be used for that specific platform. On platforms where no second
+character is available, the ABI SHOULD use Base63 (47.8 bits). It MAY use Base32 (40 bits). It MAY also use plain hexadecimal
+representation with upper case letters (32 bits).
