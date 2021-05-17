@@ -80,6 +80,9 @@ The struct's hash value is calculated over it's name and members according to th
 
 **TBD**
 
+If a struct indirectly points back to itself (e.g. contains a pointer to itself), the inner struct reports a fixed hash value of
+``0x2bcdadbd0483cb7c``.
+
 The hash is calculated in 64 bits.
 
 The lower 48 bits of the hash are taken, and then encoded with Base64 with ``+`` replaced with ``_`` and ``/`` replaced with ``@``.
